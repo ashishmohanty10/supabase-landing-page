@@ -13,6 +13,17 @@ import { ResendIcon } from "@/components/icon/resend-icon";
 import { UdioIcon } from "@/components/icon/udio-icon";
 import { MozillaIcon } from "@/components/icon/mozilla-icon";
 
+import { ReactIcon } from "@/components/icon/react-icon";
+import { NextJsIcon } from "@/components/icon/nextjs-icon";
+import { AnyFrameworkIcon } from "@/components/icon/any-framework-icon";
+import { FlutterIcon } from "@/components/icon/flutter-icon";
+import { KotlinIcon } from "@/components/icon/kotlin-icon";
+import { SvelteIcon } from "@/components/icon/svelte-icon";
+import { SolidJs } from "@/components/icon/solidjs-icon";
+import { VueIcon } from "@/components/icon/vue-icons";
+import { NuxtIcon } from "@/components/icon/nuxt-icon";
+import { RefineIcon } from "@/components/icon/refine-icon";
+
 export const navlinks = [
   { title: "Product" },
   { title: "Developers" },
@@ -100,4 +111,17 @@ export const icons = [
   { component: ResendIcon, id: 12 },
   { component: UdioIcon, id: 13 },
   { component: MozillaIcon, id: 14 },
+];
+
+export const frameworkIcons = [
+  { component: ReactIcon, id: 1, title: "React" },
+  { component: NextJsIcon, id: 2, title: "Next.js" },
+  { component: AnyFrameworkIcon, id: 3, title: "RedwoodJS" },
+  { component: FlutterIcon, id: 4, title: "Flutter" },
+  { component: KotlinIcon, id: 5, title: "Kotlin" },
+  { component: SvelteIcon, id: 6, title: "Svelte" },
+  { component: SolidJs, id: 7, title: "SolidJS" },
+  { component: VueIcon, id: 8, title: "Vue" },
+  { component: NuxtIcon, id: 9, title: "Nuxt" },
+  { component: RefineIcon, id: 10, title: "Refine" },
 ];
