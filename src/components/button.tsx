@@ -18,30 +18,27 @@ interface ButtonAsButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 type ButtonProps = ButtonBaseProps &
   (ButtonAsAnchorProps | ButtonAsButtonProps);
 
-const buttonClasses = cva(
-  "relative rounded-lg inline-flex items-center px-[1rem] py-[.25rem]",
-  {
-    variants: {
-      variant: {
-        primary:
-          "bg-primary-button border border-button-active/30 hover:border-button-active hover:bg-button-active",
-        secondary:
-          "bg-secondary-button border-2 inset-0 border-tranparent-border/30 hover:border-tranparent-border/100",
-        tertiary:
-          "hover:bg-secondary-button transition-colors duration-200 ease-out",
-      },
-      size: {
-        small: "text-xs",
-        medium: "text-sm",
-        large: "text-md",
-      },
+const buttonClasses = cva("relative rounded-lg inline-flex items-center", {
+  variants: {
+    variant: {
+      primary:
+        "bg-primary-button border border-button-active/30 hover:border-button-active hover:bg-button-active",
+      secondary:
+        "bg-secondary-button border-2 inset-0 border-tranparent-border/30 hover:border-tranparent-border/100",
+      tertiary:
+        "hover:bg-secondary-button transition-colors duration-200 ease-out",
     },
-    defaultVariants: {
-      variant: "primary",
-      size: "medium",
+    size: {
+      small: "text-xs px-[1rem] py-[.25rem]",
+      medium: "text-sm",
+      large: "text-md py-2 px-5",
     },
-  }
-);
+  },
+  defaultVariants: {
+    variant: "primary",
+    size: "medium",
+  },
+});
 
 export const Highlight = ({
   children,

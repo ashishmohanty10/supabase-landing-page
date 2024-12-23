@@ -1,22 +1,26 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "./button";
 import { Container } from "./container";
 import { Github } from "./icon/github";
 import { Logo } from "./icon/logo";
 import { navlinks } from "@/utils/constant";
+import { ChevronDown } from "lucide-react";
 
 export const Header = () => {
   return (
-    <header className="w-full border-b border-tranparent-border ">
+    <header className="fixed top-0 bg-background z-50 w-full border-b border-tranparent-border ">
       <Container className="w-full h-navigation-height flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex space-x-3 items-center">
           <Logo />
 
-          <div className="flex space-x-4 pl-8">
+          <div className="flex space-x-6 pl-8">
             {navlinks.map((link, idx) => (
               <ul key={idx}>
-                <li className="text-sm hover:text-green transition-colors">
-                  {link.title}
+                <li className="text-sm hover:text-green transition-colors flex items-center gap-2">
+                  <p>{link.title}</p>
+                  {(idx === 0 || idx === 1) && <ChevronDown size={12} />}
                 </li>
               </ul>
             ))}
@@ -28,7 +32,7 @@ export const Header = () => {
               href="/"
               className="flex items-center gap-x-1 text-seconday-text hover:text-offWhite"
             >
-              <Github />
+              <Github className="w-6 h-6" />
               75.2k
             </Link>
           </Button>

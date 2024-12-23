@@ -6,3 +6,66 @@ export const navlinks = [
   { title: "Docs" },
   { title: "Blogs" },
 ];
+
+export const footerLinks = [
+  {
+    title: "Product",
+    subtitles: [
+      "Database",
+      "Auth",
+      "Functions",
+      "Realtime",
+      "Storage",
+      "Vector",
+      "Cron",
+      "Pricing",
+      "Launch Week",
+    ],
+  },
+  {
+    title: "Resources",
+    subtitles: [
+      "Support",
+      "System Status",
+      "Become a Partner",
+      "Integrations",
+      "Brand Assets / Logos",
+      "Security and Compliance",
+      "DPA",
+      "SOC2",
+      "HIPAA",
+    ],
+  },
+  {
+    title: "Developers",
+    subtitles: [
+      "Documentation",
+      "Changelog",
+      "Contributing",
+      "Open Source",
+      "SupaSquad",
+      "DevTo",
+      "RSS",
+    ],
+  },
+  {
+    title: "Company",
+    subtitles: [
+      "Blog",
+      "Customer Stories",
+      "Careers",
+      "Company",
+      "Events & Webinars",
+      "General Availability",
+      "Terms of Service",
+      "Privacy Policy",
+      "Privacy Settings",
+      "Acceptable Use Policy",
+      "Support Policy",
+      "Service Level Agreement",
+      "Humans.txt",
+      "Lawyers.txt",
+      "Security.txt",
+    ],
+  },
+];

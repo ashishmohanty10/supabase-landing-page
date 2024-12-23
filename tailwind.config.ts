@@ -25,6 +25,7 @@ export default {
       "tranparent-border": "#2e2e2e",
       "primary-button": "#006239",
       green: "#00c573",
+      brand: "#3ecf8e",
       "button-active": "#3ecf8e80",
       "secondary-button": "#242424",
       "tertiary-button": "#292929",
