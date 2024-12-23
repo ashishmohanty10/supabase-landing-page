@@ -26,8 +26,9 @@ export default {
       "primary-button": "#006239",
       green: "#00c573",
       brand: "#3ecf8e",
+      "border-brand": "#006239",
       "button-active": "#3ecf8e80",
-      "secondary-button": "#242424",
+      "secondary-color": "#242424",
       "tertiary-button": "#292929",
     },
 
@@ -54,6 +55,17 @@ export default {
       19: "7.6rem",
       20: "8rem",
       "navigation-height": "var(--navigation-height)",
+    },
+
+    animation: {
+      "infinite-scroll":
+        "infinite-scroll var(--animation-delay)  linear infinite forwards",
+    },
+    keyframes: {
+      "infinite-scroll": {
+        from: { transform: "translateX(0)" },
+        to: { transform: "translateX(-100%)" },
+      },
     },
   },
 

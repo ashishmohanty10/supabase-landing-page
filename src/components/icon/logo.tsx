@@ -6,7 +6,7 @@ export const Logo = () => {
       src="/logo.webp"
       alt="Logo"
       priority
-      width={120}
+      width={125}
       height={120}
       className="shrink-0"
     />

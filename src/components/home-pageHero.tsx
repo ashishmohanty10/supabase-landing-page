@@ -2,6 +2,7 @@ import { cn } from "@/utils/utils";
 
 interface HeroProps {
   children: React.ReactNode;
+  className?: string;
 }
 
 interface HeroElementsProps {
@@ -21,6 +22,6 @@ export const HerosubTitle = ({ children, className }: HeroElementsProps) => {
   return <p className={cn("text-lg py-4", className)}>{children}</p>;
 };
 
-export const Hero = ({ children }: HeroProps) => {
-  return <div className="text-center">{children}</div>;
+export const Hero = ({ children, className }: HeroProps) => {
+  return <div className={cn("text-center", className)}>{children}</div>;
 };

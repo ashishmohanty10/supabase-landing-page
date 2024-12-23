@@ -10,15 +10,15 @@ import { ChevronDown } from "lucide-react";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 bg-background z-50 w-full border-b border-tranparent-border ">
+    <header className="fixed top-0 backdrop-blur-md z-50 w-full border-b border-tranparent-border bg-background/60">
       <Container className="w-full h-navigation-height flex items-center justify-between">
-        <div className="flex space-x-3 items-center">
+        <div className="flex space-x-2 items-center">
           <Logo />
 
-          <div className="flex space-x-6 pl-8">
+          <div className="flex space-x-5 pl-8">
             {navlinks.map((link, idx) => (
               <ul key={idx}>
-                <li className="text-sm hover:text-green transition-colors flex items-center gap-2">
+                <li className="text-sm hover:text-green transition-colors flex items-center gap-1">
                   <p>{link.title}</p>
                   {(idx === 0 || idx === 1) && <ChevronDown size={12} />}
                 </li>
