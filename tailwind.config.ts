@@ -59,12 +59,12 @@ export default {
 
     animation: {
       "infinite-scroll":
-        "infinite-scroll var(--animation-delay)  linear infinite forwards",
+        "infinite-scroll var(--animation-delay) linear infinite forwards",
     },
     keyframes: {
       "infinite-scroll": {
         from: { transform: "translateX(0)" },
-        to: { transform: "translateX(-100%)" },
+        to: { transform: "translateX(-50%)" },
       },
     },
   },
