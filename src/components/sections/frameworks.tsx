@@ -6,7 +6,7 @@ import { useState } from "react";
 import { cn } from "@/utils/utils";
 
 export const Frameworks = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState("any framework");
   return (
     <>
       <Container className="flex items-center justify-between max-w-[120rem] mx-auto py-16">
@@ -22,10 +22,10 @@ export const Frameworks = () => {
           {frameworkIcons.map((icon) => (
             <div
               key={icon.id}
-              className="cursor-pointer"
+              className="cursor-pointer max-w-16"
               onMouseEnter={() => setName(icon.title)}
             >
-              <icon.component className="hover:text-offWhite hover:border p-3 w-full h-full" />
+              <icon.component className="hover:text-offWhite hover:border p-3 w-full h-full rounded-xl" />
             </div>
           ))}
         </div>
