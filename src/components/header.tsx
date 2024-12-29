@@ -10,7 +10,7 @@ import { ChevronDown } from "lucide-react";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 backdrop-blur-md z-50 w-full border-b border-tranparent-border bg-background/60">
+    <header className="fixed top-0 backdrop-blur-md z-50 w-full border-b border-transparent-border bg-background/60">
       <Container className="w-full h-navigation-height flex items-center justify-between">
         <div className="flex space-x-2 items-center">
           <Logo />
@@ -30,7 +30,7 @@ export const Header = () => {
           <Button variant="tertiary" size="small">
             <Link
               href="/"
-              className="flex items-center gap-x-1 text-seconday-text hover:text-offWhite"
+              className="flex items-center gap-x-1 text-secondary-text hover:text-offWhite"
             >
               <Github className="w-6 h-6" />
               75.2k

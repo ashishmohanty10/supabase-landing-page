@@ -21,8 +21,8 @@ export default {
     colors: {
       offWhite: "#fafafa",
       background: "#121212",
-      "seconday-text": "#898989",
-      "tranparent-border": "#2e2e2e",
+      "secondary-text": "#898989",
+      "transparent-border": "#2e2e2e",
       "primary-button": "#006239",
       green: "#00c573",
       brand: "#3ecf8e",
@@ -60,11 +60,17 @@ export default {
     animation: {
       "infinite-scroll":
         "infinite-scroll var(--animation-delay) linear infinite forwards",
+      "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
     },
     keyframes: {
       "infinite-scroll": {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(-50%)" },
+      },
+
+      "fade-in": {
+        from: { opacity: "0", transform: "translateY(-10px)" },
+        to: { opacity: "1", transform: "none" },
       },
     },
   },

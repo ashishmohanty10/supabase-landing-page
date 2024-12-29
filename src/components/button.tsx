@@ -24,13 +24,13 @@ const buttonClasses = cva("relative inline-flex items-center", {
       primary:
         "bg-primary-button border border-button-active/30 hover:border-button-active hover:bg-button-active rounded-lg",
       secondary:
-        "bg-secondary-color/70 hover:bg-secondary-color border-2 inset-0 border-tranparent-border/30 hover:border-tranparent-border/100 rounded-lg",
+        "bg-secondary-color/70 hover:bg-secondary-color border-2 inset-0 border-transparent-border/30 hover:border-transparent-border/100 rounded-lg",
       tertiary:
         "hover:bg-secondary-color transition-colors duration-200 ease-out rounded-lg",
       quaternary:
-        "bg-secondary-color/70 rounded-[6rem] hover:bg-secondary-color tranistion-colors",
+        "bg-secondary-color/70 rounded-[6rem] hover:bg-secondary-color transition-colors",
       quinary:
-        "bg-secondary-color/70 rounded-full hover:bg-secondary-color tranistion-colors border border-transparent-border/10 hover:border-tranparent-border",
+        "bg-secondary-color/70 rounded-full hover:bg-secondary-color transition-colors border border-transparent-border/10 hover:border-transparent-border",
     },
     size: {
       small: "text-xs px-[1rem] py-[.25rem]",

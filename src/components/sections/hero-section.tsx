@@ -63,7 +63,7 @@ export const HeroSection = () => {
             </div>
           </Marquee>
 
-          <p className="text-sm text-seconday-text">
+          <p className="text-sm text-secondary-text">
             Trusted by fast-growing companies worldwide
           </p>
         </Hero>

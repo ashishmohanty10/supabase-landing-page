@@ -8,14 +8,14 @@ import { Youtube } from "../icon/youtube";
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-b border-tranparent-border">
+    <footer className="border-t border-b border-transparent-border">
       <Container className="flex flex-col md:flex-row justify-between py-20">
         <div>
           <div>
             <Logo />
           </div>
 
-          <div className="[&_svg]:h-[2.2rem] [&_svg]:w-[2.2rem] flex items-center gap-x-5 text-seconday-text pt-4 mt-auto">
+          <div className="[&_svg]:h-[2.2rem] [&_svg]:w-[2.2rem] flex items-center gap-x-5 text-secondary-text pt-4 mt-auto">
             <X className="hover:text-offWhite" />
             <Github className="hover:text-offWhite" />
             <Discord className="hover:text-offWhite" />
@@ -35,7 +35,7 @@ export const Footer = () => {
                 {link.subtitles.map((sublinks) => (
                   <li
                     key={sublinks}
-                    className="text-sm mb-2 last:mb-0 text-seconday-text hover:text-offWhite transition-colors"
+                    className="text-sm mb-2 last:mb-0 text-secondary-text hover:text-offWhite transition-colors"
                   >
                     {sublinks}
                   </li>
@@ -45,8 +45,8 @@ export const Footer = () => {
           ))}
         </div>
       </Container>
-      <Container className="py-10 border-t border-tranparent-border">
-        <p className="text-seconday-text">© Supabase Inc</p>
+      <Container className="py-10 border-t border-transparent-border">
+        <p className="text-secondary-text">© Supabase Inc</p>
       </Container>
     </footer>
   );
