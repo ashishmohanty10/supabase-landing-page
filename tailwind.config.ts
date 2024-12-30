@@ -15,7 +15,8 @@ export default {
       sm: "1.4rem",
       md: "1.6rem",
       lg: "1.8rem",
-      xl: "3.6rem",
+      xl: "2.25rem",
+      "2xl": "3.6rem",
       "5xl": "7.2rem",
     },
     colors: {
@@ -29,6 +30,7 @@ export default {
       "border-brand": "#006239",
       "button-active": "#3ecf8e80",
       "secondary-color": "#242424",
+      "tertiary-color": "#171717",
       "tertiary-button": "#292929",
     },
 

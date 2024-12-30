@@ -3,7 +3,6 @@ import { ChatBaseIcon } from "@/components/icon/chatbase-icon";
 import { GithubIcon } from "@/components/icon/github-icon";
 import { HumataIcon } from "@/components/icon/humata-icon";
 import { KreaIcon } from "@/components/icon/krea-icon";
-import { LangchainIcon } from "@/components/icon/langchain-icon";
 import { LoopIcon } from "@/components/icon/loop-icon";
 import { MobbinIcon } from "@/components/icon/mobbin-icon";
 import { OnePassword } from "@/components/icon/onepassword-icon";
@@ -23,6 +22,11 @@ import { SolidJs } from "@/components/icon/solidjs-icon";
 import { VueIcon } from "@/components/icon/vue-icons";
 import { NuxtIcon } from "@/components/icon/nuxt-icon";
 import { RefineIcon } from "@/components/icon/refine-icon";
+import { Stripe } from "@/components/icon/stripe";
+import { Triangle } from "@/components/icon/triangle";
+import { ChatGpt } from "@/components/icon/chat-gpt";
+import { LangChain } from "@/components/icon/langchain";
+import { Expo } from "@/components/icon/expo";
 
 export const navlinks = [
   { title: "Product" },
@@ -102,7 +106,7 @@ export const icons = [
   { component: GithubIcon, id: 3 },
   { component: HumataIcon, id: 4 },
   { component: KreaIcon, id: 5 },
-  { component: LangchainIcon, id: 6 },
+  { component: LangChain, id: 6 },
   { component: LoopIcon, id: 7 },
   { component: MobbinIcon, id: 8 },
   { component: OnePassword, id: 9 },
@@ -124,4 +128,49 @@ export const frameworkIcons = [
   { component: VueIcon, id: 8, title: "Vue" },
   { component: NuxtIcon, id: 9, title: "Nuxt" },
   { component: RefineIcon, id: 10, title: "Refine" },
+];
+
+export const starterKit = [
+  {
+    title: "Stripe Subscriptions Starter",
+    description:
+      "The all-in-one subscription starter kit for high-performance SaaS applications, powered by Stripe, Supabase, and Vercel.",
+    image: [NextJsIcon, Stripe, Triangle],
+    link: "View Template",
+  },
+  {
+    title: "Next.js Starter",
+    description:
+      "A Next.js App Router template configured with cookie-based auth using Supabase, TypeScript, and Tailwind CSS.",
+    image: [NextJsIcon, Triangle],
+    link: "View Template",
+  },
+  {
+    title: "AI Chatbot",
+    description:
+      "An open-source AI chatbot app template built with Next.js, the Vercel AI SDK, OpenAI, and Supabase.",
+    image: [NextJsIcon, ChatGpt, Triangle],
+    link: "View Template",
+  },
+  {
+    title: "LangChain + Next.js Starter",
+    description:
+      "Starter template and example use-cases for LangChain projects in Next.js, including chat, agents, and retrieval.",
+    image: [LangChain, NextJsIcon],
+    link: "View Template",
+  },
+  {
+    title: "Flutter User Management",
+    description:
+      "Get started with Supabase and Flutter by building a user management app with auth, file storage, and database.",
+    image: [FlutterIcon],
+    link: "View Template",
+  },
+  {
+    title: "Expo React Native Starter",
+    description:
+      "An extended version of create-t3-turbo implementing authentication on both the web and mobile applications.",
+    image: [Expo],
+    link: "View Template",
+  },
 ];
