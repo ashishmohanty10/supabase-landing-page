@@ -1,29 +1,69 @@
+import Image from "next/image";
 import { Container } from "../container";
-import { Title } from "../title";
+import { DB } from "../icon/db";
+import { PostgresIcon } from "../icon/postgres-icon";
+import { Tick } from "../icon/tick";
 
-export function Showcase() {
+export const Showcase = () => {
   return (
-    <>
-      <Container className="py-16 flex flex-col items-center">
-        <Title className="mb-10">
-          Stay productive and manage your app <br />
-          <span className="text-secondary-text">
-            without leaving the dashboard
-          </span>
-        </Title>
+    <Container>
+      <div className="w-full flex gap-5">
+        <PostgresDB />
 
-        <div className="flex w-fit justify-center border border-transparent-border p-2 rounded-3xl flex-col">
-          <div className="flex items-center gap-x-2 mb-2">
-            <div className="w-2  h-2 rounded-full bg-secondary-text"></div>
-            <div className="w-2  h-2 rounded-full bg-secondary-text"></div>
-            <div className="w-2  h-2 rounded-full bg-secondary-text"></div>
-          </div>
-          <video autoPlay muted loop playsInline className="flex-1 max-w-7xl">
-            <source src="/supabase-rls.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
+        <div className="w-1/2 h-[40rem] flex gap-5">
+          <div className="w-1/2 h-full bg-transparent-border rounded-2xl"></div>
+          <div className="w-1/2 h-full bg-offWhite rounded-2xl"></div>
         </div>
-      </Container>
-    </>
+      </div>
+    </Container>
   );
-}
+};
+
+const PostgresDB = () => {
+  return (
+    <div className="bg-tertiary-color flex p-5 w-1/2 h-[40rem] rounded-2xl justify-between border-transparent-border">
+      <div className="flex flex-col items-stretch justify-between">
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <DB />
+            <p className="text-sm text-offWhite">Postgres Database</p>
+          </div>
+
+          <p className="text-secondary-text text-sm">
+            Every project is{" "}
+            <span className="text-offWhite">
+              a full Postgres <br /> database
+            </span>
+            , the world's most trusted <br /> relational database
+          </p>
+        </div>
+
+        <div>
+          <p className="flex items-center space-x-2">
+            <Tick className="w-4 h-4" />
+            <span>100% profitable</span>
+          </p>
+          <p className="flex items-center space-x-2">
+            <Tick className="w-4 h-4" />
+            <span>Built in auth with RLS</span>
+          </p>
+          <p className="flex items-center space-x-2">
+            <Tick className="w-4 h-4" />
+            <span>Easy to extend</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="group cursor-pointer relative">
+        <Image
+          src="/database-light.webp"
+          alt="Db"
+          width={800}
+          height={800}
+          className="w-full h-full absolute inset-0"
+        />
+        <PostgresIcon className="group-hover:text-brand text-offWhite w-full h-full relative z-10" />
+      </div>
+    </div>
+  );
+};

@@ -397,3 +397,39 @@ export const testimonials = [
     retweets: 70,
   },
 ];
+
+export const customerStories = [
+  {
+    main: {
+      img: ChatBaseIcon,
+      text: "Maergo's Express Delivery: How Supabase Helped Achieve Scalability, Speed, and Cost Saving",
+    },
+
+    side: {
+      image1: Betashares,
+      image2: LoopIcon,
+    },
+  },
+  {
+    main: {
+      img: Expo,
+      text: "Scaling securely: one million users in 7 months protected with Supabase Auth",
+    },
+
+    side: {
+      image1: LoopIcon,
+      image2: MozillaIcon,
+    },
+  },
+  {
+    main: {
+      img: KreaIcon,
+      text: "Bootstrapped founder builds an AI app with Supabase and scales to $1M in 5 months.",
+    },
+
+    side: {
+      image1: ChatGpt,
+      image2: PwcIcon,
+    },
+  },
+];
