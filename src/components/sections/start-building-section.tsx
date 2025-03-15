@@ -22,8 +22,8 @@ export const StartBuilding = () => {
           View all examples
         </Button>
         <Button size="medium" variant="secondary">
-          <Github className="w-6 h-6" />
-          Official GitHub Library
+          <Github className="w-5 h-5" />{" "}
+          <span className="ml-1 mt-1">Official GitHub Library</span>
         </Button>
       </div>
 
@@ -39,7 +39,7 @@ export const StartBuilding = () => {
               ))}
             </div>
 
-            <div className="border-t rounded-b-2xl border-transparent-border bg-tertiary-color p-5 ">
+            <div className="border-t rounded-b-2xl border-transparent-border bg-tertiary-color p-5">
               <h3 className="text-md mb-2">{data.title}</h3>
               <p className="text-xs text-secondary-text">{data.description}</p>
 

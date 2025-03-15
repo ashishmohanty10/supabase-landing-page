@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { CTA } from "@/components/sections/cta";
+import { CustomerStories } from "@/components/sections/customer-stories";
 import { Footer } from "@/components/sections/footer";
 import { Frameworks } from "@/components/sections/frameworks";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -13,12 +14,12 @@ export default function Home() {
       <Header />
       <HeroSection />
       <Frameworks />
+      <CustomerStories />
       <StartBuilding />
       <Showcase />
       <Testimonial />
       <CTA />
       <Footer />
-
     </>
   );
 }

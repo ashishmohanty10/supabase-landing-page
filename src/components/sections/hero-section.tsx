@@ -42,8 +42,8 @@ export const HeroSection = () => {
             </Button>
           </div>
 
-          <Marquee className="flex items-center max-w-[70rem] mx-auto my-5 overflow-hidden  mask-image-custom">
-            <div className="flex animate-infinite-scroll [--animation-delay:50s]">
+          <Marquee className="flex items-center max-w-[70rem] mx-auto my-5 overflow-hidden  mask-image-custom group">
+            <div className="flex animate-infinite-scroll [--animation-delay:50s] group-hover:[animation-play-state:paused]">
               {icons.map((icon) => (
                 <div
                   key={icon.id}
