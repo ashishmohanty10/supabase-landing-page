@@ -8,7 +8,7 @@ import { Youtube } from "../icon/youtube";
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-b border-transparent-border">
+    <footer className="border-t border-b border-transparent-border bg-black">
       <Container className="flex flex-col md:flex-row justify-between py-20">
         <div>
           <div>

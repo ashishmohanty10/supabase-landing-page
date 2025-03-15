@@ -19,9 +19,11 @@ export default {
       "2xl": "3.6rem",
       "5xl": "7.2rem",
     },
+
     colors: {
       offWhite: "#fafafa",
       background: "#121212",
+      black: "#0f0f0f",
       "secondary-text": "#898989",
       "transparent-border": "#2e2e2e",
       "primary-button": "#006239",
