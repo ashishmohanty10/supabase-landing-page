@@ -1,7 +1,20 @@
 "use client";
 import { motion } from "motion/react";
 
-export const ReviewItem = ({ items }: { items: any }) => {
+interface ReviewItemProps {
+  items: {
+    main: {
+      img: React.ComponentType<{ className?: string }>;
+      text: string;
+    };
+    side: {
+      image1: React.ComponentType<{ className?: string }>;
+      image2: React.ComponentType<{ className?: string }>;
+    };
+  };
+}
+
+export const ReviewItem: React.FC<ReviewItemProps> = ({ items }) => {
   return (
     <div className="flex gap-5 w-full">
       <motion.div

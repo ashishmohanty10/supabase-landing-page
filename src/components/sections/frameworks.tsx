@@ -4,6 +4,7 @@ import { frameworkIcons } from "@/utils/constant";
 import { Container } from "../container";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { cn } from "@/utils/utils";
 
 export const Frameworks = () => {
   const [name, setName] = useState("any framework");
@@ -36,12 +37,18 @@ export const Frameworks = () => {
         {frameworkIcons.map((icon) => (
           <motion.div
             key={icon.id}
+            layoutId={`icon-${icon.id}`}
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="cursor-pointer max-w-16"
+            className={cn(
+              `cursor-pointer max-w-16 opacity-90  ${
+                name === icon.title &&
+                "hover:bg-offWhite/10 rounded-lg transition-colors"
+              }`
+            )}
             onMouseEnter={() => setName(icon.title)}
           >
-            <icon.component className="hover:text-offWhite hover:border  p-3 w-full h-full rounded-xl transition-colors" />
+            <icon.component className="hover:text-offWhite p-3 w-full h-full rounded-xl transition-colors" />
           </motion.div>
         ))}
       </div>

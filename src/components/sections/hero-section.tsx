@@ -18,7 +18,7 @@ export const HeroSection = () => {
             <Highlight>Launch Week 13</Highlight>
             <p className="pr-3 flex items-center gap-3">
               Learn more
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 tranisiton-[translate] duration-200" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 duration-200" />
             </p>
           </Button>
 
