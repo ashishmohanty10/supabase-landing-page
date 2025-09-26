@@ -12,8 +12,7 @@ export const StartBuilding = () => {
         <Title>Start building in seconds</Title>
 
         <SubTitle className="text-md text-secondary-text">
-          Kickstart your next project with templates built by us and our
-          community.
+          Kickstart your next project with templates built by us and our community.
         </SubTitle>
       </div>
 
@@ -21,21 +20,15 @@ export const StartBuilding = () => {
         <Button size="medium" variant="secondary" className="hidden md:block">
           View all examples
         </Button>
-        <Button
-          size="medium"
-          variant="secondary"
-          className="hidden md:block flex item-center gap-x-2"
-        >
-          <Github className="w-5 h-5" />{" "}
-          <span className="ml-1 mt-1">Official GitHub Library</span>
+        <Button size="medium" variant="secondary" className="hidden md:flex item-center gap-x-2">
+          <Github className="w-5 h-5" /> <span className="ml-1">Official GitHub Library</span>
         </Button>
 
         <Button size="small" variant="secondary" className="md:hidden">
           View all examples
         </Button>
         <Button size="small" variant="secondary" className="md:hidden">
-          <Github className="w-5 h-5" />{" "}
-          <span className="ml-1 mt-1">Official GitHub Library</span>
+          <Github className="w-5 h-5" /> <span className="ml-1 mt-1">Official GitHub Library</span>
         </Button>
       </div>
 
