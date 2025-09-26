@@ -13,25 +13,33 @@ export function CTA() {
         </Title>
 
         <div className="space-x-2 mt-5 mb-18 flex justify-center">
-          <Button size="medium">Start Your Project</Button>
-          <Button size="medium" variant="secondary">
+          <Button size="medium" className="hidden md:block">
+            Start Your Project
+          </Button>
+          <Button size="medium" className="hidden md:block" variant="secondary">
+            Request a demo
+          </Button>
+          <Button size="small" className="md:hidden">
+            Start Your Project
+          </Button>
+          <Button size="small" className="md:hidden" variant="secondary">
             Request a demo
           </Button>
         </div>
       </Container>
 
-      <div className="bg-black w-full text-center p-5 flex items-center justify-center gap-20 py-10">
+      <div className="bg-black w-full text-center p-5 md:flex  items-center justify-center gap-20 py-10 space-y-4 md:space-y-0">
         <p className="text-sm">
           We protect your data.
           <span className="text-brand">More on Security</span>
         </p>
 
-        <p className="flex items-center gap-x-3 text-sm">
+        <p className="flex items-center gap-x-3 text-sm justify-center">
           <Check size={16} />
           SOC2 Type 2 Certified
         </p>
 
-        <p className="flex items-center gap-x-3 text-sm">
+        <p className="flex items-center gap-x-3 text-sm justify-center">
           <Check size={16} />
           HIPAA Compliant
         </p>

@@ -1,0 +1,33 @@
+# Node
+node_modules
+dist
+build
+.next
+out
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*.local
+
+# Git
+.git
+.gitignore
+
+# Other configs
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Assets
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.gif
+*.ico
+
+# Generated files
+coverage

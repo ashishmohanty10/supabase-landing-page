@@ -16,13 +16,13 @@ export const HeroSection = () => {
             className="space-x-2 group mb-8"
           >
             <Highlight>Launch Week 13</Highlight>
-            <p className="pr-3 flex items-center gap-3">
+            <p className="pr-3 flex items-center gap-3 text-xs md:text-base">
               Learn more
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 duration-200" />
             </p>
           </Button>
 
-          <HeroTitle className=" tracking-normal">
+          <HeroTitle className="tracking-normal">
             Build in a weekend <br className="hidden md:block" />
             <span className="text-brand">Scale to millions</span>
           </HeroTitle>
@@ -35,9 +35,22 @@ export const HeroSection = () => {
             subscriptions, Storage, and Vector embeddings.
           </HerosubTitle>
 
-          <div className="space-x-2 mt-5 mb-18">
-            <Button size="medium">Start Your Project</Button>
-            <Button size="medium" variant="secondary">
+          <div className="flex items-center justify-center space-x-2 mt-5 mb-18">
+            <Button size="medium" className="hidden md:block">
+              Start Your Project
+            </Button>
+            <Button
+              size="medium"
+              variant="secondary"
+              className="hidden md:block"
+            >
+              Request a demo
+            </Button>
+
+            <Button size="small" className="md:hidden">
+              Start Your Project
+            </Button>
+            <Button size="small" variant="secondary" className="md:hidden">
               Request a demo
             </Button>
           </div>

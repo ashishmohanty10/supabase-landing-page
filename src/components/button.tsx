@@ -33,6 +33,7 @@ const buttonClasses = cva("relative inline-flex items-center", {
         "bg-secondary-color/70 rounded-full hover:bg-secondary-color transition-colors border border-transparent-border/10 hover:border-transparent-border",
     },
     size: {
+      xs: "text-xs",
       small: "text-xs px-[1rem] py-[.25rem]",
       medium: "text-sm py-[.7rem] px-4",
       cta: "text-sm py-[0.7rem] px-1",
@@ -53,7 +54,7 @@ export const Highlight = ({
 }) => (
   <span
     className={cn(
-      "border border-brand/30 bg-brand/10 text-brand rounded-full py-[0.3rem] px-3",
+      "border border-brand/30 bg-brand/10 text-xs md:text-base text-brand rounded-full py-[0.3rem] px-3",
       className
     )}
   >

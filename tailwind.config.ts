@@ -17,6 +17,8 @@ export default {
       lg: "1.8rem",
       xl: "2.25rem",
       "2xl": "3.6rem",
+      "3xl": "4.8rem",
+      "4xl": "6rem",
       "5xl": "7.2rem",
     },
 

@@ -7,20 +7,15 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { VideoShowcase } from "@/components/sections/video-showcase";
 import { StartBuilding } from "@/components/sections/start-building-section";
 import { Testimonial } from "@/components/sections/testimonial";
-// import { Showcase } from "@/components/sections/showcase";
 
 export default function Home() {
   return (
     <>
       <Header />
       <HeroSection />
-      {/* <Showcase /> */}
-      <Frameworks />
       <CustomerStories />
       <StartBuilding />
       <Frameworks />
-      <CustomerStories />
-      <StartBuilding />
       <VideoShowcase />
       <Testimonial />
       <CTA />

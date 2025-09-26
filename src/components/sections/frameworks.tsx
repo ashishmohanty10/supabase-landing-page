@@ -9,9 +9,9 @@ import { cn } from "@/utils/utils";
 export const Frameworks = () => {
   const [name, setName] = useState("any framework");
   return (
-    <Container className="flex items-center justify-between max-w-[120rem] mx-auto py-16">
-      <div>
-        <p className="text-2xl leading-tight text-secondary-text">
+    <Container className="lg:flex items-center justify-between max-w-[120rem] mx-auto py-16">
+      <div className="mb-4 lg:mb-0 text-center lg:text-left">
+        <p className="text-xl md:text-2xl leading-tight text-secondary-text">
           Use Supabase with
         </p>
 
@@ -26,14 +26,14 @@ export const Frameworks = () => {
               damping: 15,
               duration: 0.15,
             }}
-            className="text-2xl leading-tight"
+            className="text-xl md:text-2xl leading-tight"
           >
             {name}
           </motion.p>
         </AnimatePresence>
       </div>
 
-      <div className="[&_svg]:text-secondary-text flex items-center gap-2">
+      <div className="[&_svg]:text-secondary-text flex items-center gap-2 justify-center">
         {frameworkIcons.map((icon) => (
           <motion.div
             key={icon.id}
@@ -48,7 +48,7 @@ export const Frameworks = () => {
             )}
             onMouseEnter={() => setName(icon.title)}
           >
-            <icon.component className="hover:text-offWhite p-3 w-full h-full rounded-xl transition-colors" />
+            <icon.component className="hover:text-offWhite lg:p-3 w-full h-full rounded-xl transition-colors" />
           </motion.div>
         ))}
       </div>

@@ -18,7 +18,13 @@ export function VideoShowcase() {
             <div className="w-2  h-2 rounded-full bg-secondary-text"></div>
             <div className="w-2  h-2 rounded-full bg-secondary-text"></div>
           </div>
-          <video autoPlay muted loop playsInline className="flex-1 max-w-7xl">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="flex-1 max-w-lg md:max-w-3xl lg:max-w-7xl"
+          >
             <source src="/supabase-rls.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>

@@ -17,17 +17,29 @@ export const StartBuilding = () => {
         </SubTitle>
       </div>
 
-      <div className="flex items-center gap-2 mb-10">
-        <Button size="medium" variant="secondary">
+      <div className="flex items-center gap-x-2 mb-10">
+        <Button size="medium" variant="secondary" className="hidden md:block">
           View all examples
         </Button>
-        <Button size="medium" variant="secondary">
+        <Button
+          size="medium"
+          variant="secondary"
+          className="hidden md:block flex item-center gap-x-2"
+        >
+          <Github className="w-5 h-5" />{" "}
+          <span className="ml-1 mt-1">Official GitHub Library</span>
+        </Button>
+
+        <Button size="small" variant="secondary" className="md:hidden">
+          View all examples
+        </Button>
+        <Button size="small" variant="secondary" className="md:hidden">
           <Github className="w-5 h-5" />{" "}
           <span className="ml-1 mt-1">Official GitHub Library</span>
         </Button>
       </div>
 
-      <div className="grid grid-cols-3 w-full justify-between gap-5 pt-5 max-w-[120rem] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full justify-between gap-5 pt-5 max-w-[120rem] mx-auto">
         {starterKit.map((data, idx) => (
           <div
             className="border border-transparent-border rounded-2xl group flex flex-col justify-between"

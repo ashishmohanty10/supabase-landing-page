@@ -10,7 +10,7 @@ export function Title({
   return (
     <div
       className={cn(
-        "text-center text-2xl text-offWhite leading-tight",
+        "text-center text-xl md:text-2xl text-offWhite leading-tight",
         className
       )}
     >
@@ -27,7 +27,12 @@ export function SubTitle({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("text-md text-secondary-text text-center ", className)}>
+    <div
+      className={cn(
+        "text-sm md:text-md text-secondary-text text-center ",
+        className
+      )}
+    >
       {children}
     </div>
   );
