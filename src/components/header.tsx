@@ -132,7 +132,7 @@ export const Header = () => {
                   animate={{ x: 0 }}
                   exit={{ x: "100%" }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="fixed top-0 right-0 h-screen w-full bg-background/95 backdrop-blur-2xl z-30"
+                  className="fixed top-0 right-0 h-screen w-full bg-background/95 backdrop-blur-2xl z-30 overflow-y-auto no-scrollbar"
                 >
                   <motion.div
                     className="py-16"

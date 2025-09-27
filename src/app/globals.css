@@ -15,11 +15,7 @@
 
 @layer utilities {
   .mask-gradient-opacity {
-    -webkit-mask: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0) 100%,
-      rgb(0, 0, 0) 100%
-    );
+    -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 100%, rgb(0, 0, 0) 100%);
     mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 20%, rgb(0, 0, 0) 100%);
     opacity: 1;
   }
@@ -42,4 +38,14 @@
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
   }
+}
+
+.no-scrollbar {
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
