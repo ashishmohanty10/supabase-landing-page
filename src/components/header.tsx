@@ -33,6 +33,12 @@ export const Header = () => {
     show: { opacity: 1, y: 0 },
   };
 
+  const dropdownVariants = {
+    initial: { opacity: 0, x: -20 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -20, transition: { duration: 0.2 } },
+  };
+
   return (
     <header className="fixed top-0 backdrop-blur-md z-50 w-full border-b border-transparent-border bg-background/60">
       <Container className="h-navigation-height flex items-center justify-between w-full">
@@ -40,19 +46,62 @@ export const Header = () => {
           <Logo />
 
           {/* desktop */}
-          <div className="lg:flex space-x-5 pl-8 hidden">
+          <div className="lg:flex space-x-5 pl-8 hidden relative">
             {navLinks.map((link, idx) => (
-              <div key={idx}>
-                <ul>
+              <div
+                key={idx}
+                onMouseEnter={() => setActiveIdx(activeIdx === idx ? null : idx)}
+                onMouseLeave={() => setActiveIdx(null)}
+              >
+                <ul className="group">
                   <li className="text-sm hover:text-green transition-colors flex items-center gap-1">
                     <p>{link.title}</p>
-                    {link.megaMenu && <ChevronDown size={12} />}
+                    {link.megaMenu && (
+                      <ChevronDown
+                        size={12}
+                        className="group-hover:rotate-180 transition-transform"
+                      />
+                    )}
                   </li>
                 </ul>
+                <AnimatePresence mode="wait">
+                  {activeIdx != null && activeIdx === idx && link.megaMenu && (
+                    <motion.div
+                      key={link.title}
+                      variants={dropdownVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      transition={{ duration: 0.3 }}
+                      className="absolute w-[450px] h-fit bg-black z-50 top-6 p-4 rounded-md border border-transparent-border grid grid-cols-2 text-md font-medium"
+                    >
+                      {link.megaMenu?.columns.map((item, idx) => (
+                        <motion.div key={idx}>
+                          {item?.heading && (
+                            <div className="mt-3 mb-1 text-secondary-text">{item.heading}</div>
+                          )}
+                          <div>
+                            {item.items.map((text, idx) => (
+                              <motion.div
+                                key={idx}
+                                variants={childVariants}
+                                className="flex items-center justify-start gap-x-3 mb-4 hover:text-green hover:transition-colors cursor-pointer"
+                              >
+                                <div>
+                                  {text.icon ? (
+                                    <text.icon className="size-4 text-green-500" />
+                                  ) : null}
+                                </div>
 
-                {activeIdx != null && activeIdx === idx && (
-                  <div className="w-[250px] h-fit bg-black"></div>
-                )}
+                                <div>{text.title}</div>
+                              </motion.div>
+                            ))}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
