@@ -11,7 +11,6 @@ import { PwcIcon } from "@/components/icon/pwc-icon";
 import { ResendIcon } from "@/components/icon/resend-icon";
 import { UdioIcon } from "@/components/icon/udio-icon";
 import { MozillaIcon } from "@/components/icon/mozilla-icon";
-
 import { ReactIcon } from "@/components/icon/react-icon";
 import { NextJsIcon } from "@/components/icon/nextjs-icon";
 import { AnyFrameworkIcon } from "@/components/icon/any-framework-icon";
@@ -27,11 +26,148 @@ import { Triangle } from "@/components/icon/triangle";
 import { ChatGpt } from "@/components/icon/chat-gpt";
 import { LangChain } from "@/components/icon/langchain";
 import { Expo } from "@/components/icon/expo";
+import { Archive, Clock8, Database, Fingerprint, RefreshCw } from "lucide-react";
 
-export const navlinks = [
-  { title: "Product" },
-  { title: "Developers" },
-  { title: "Enterprise" },
+interface NavItem {
+  title: string;
+  href?: string;
+  desc?: string;
+  icon?: React.ElementType;
+}
+
+interface NavColumn {
+  heading: string;
+  items: NavItem[];
+}
+
+interface NavLink {
+  title: string;
+  href?: string;
+  megaMenu?: { columns: NavColumn[] };
+}
+
+import {
+  Brain,
+  CalendarClock,
+  SendHorizonal,
+  Sparkles,
+  BookOpen,
+  Puzzle,
+  Layout,
+  History,
+  LifeBuoy,
+  Code2,
+  Github,
+  Users,
+  Briefcase,
+  Calendar,
+  FileText,
+  Bot,
+  MousePointerClick,
+  User,
+  Laptop,
+  Server,
+  Trophy,
+  Building2,
+  Factory,
+  Shuffle,
+  ArrowLeftRight,
+} from "lucide-react";
+
+export const navLinks: NavLink[] = [
+  {
+    title: "Product",
+    megaMenu: {
+      columns: [
+        {
+          heading: "",
+          items: [
+            { title: "Database", desc: "Fully portable Postgres database", icon: Database },
+            { title: "Authentication", desc: "User Management out of the box", icon: Fingerprint },
+            { title: "Storage", desc: "Serverless storage for any media", icon: Archive },
+            { title: "Edge Functions", desc: "Deploy code globally on the edge", icon: RefreshCw },
+            { title: "Realtime", desc: "Synchronize and broadcast events", icon: Clock8 },
+          ],
+        },
+        {
+          heading: "Modules",
+          items: [
+            { title: "Vector", desc: "AI toolkit to manage embeddings", icon: Brain },
+            { title: "Cron", desc: "Schedule and manage recurring Jobs", icon: CalendarClock },
+            { title: "Queues", desc: "Durable Message Queues", icon: SendHorizonal },
+            { title: "Features", desc: "Explore everything Supabase offers", icon: Sparkles },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    title: "Developers",
+    megaMenu: {
+      columns: [
+        {
+          heading: "",
+          items: [
+            { title: "Documentation", icon: BookOpen },
+            { title: "Integrations", icon: Puzzle },
+            { title: "Supabase UI", icon: Layout },
+            { title: "Changelog", icon: History },
+            { title: "Support", icon: LifeBuoy },
+          ],
+        },
+        {
+          heading: "Resources",
+          items: [
+            { title: "Open Source", icon: Code2 },
+            { title: "GitHub Discussions", icon: Github },
+            { title: "Become a Partner", icon: Users },
+            { title: "Careers", icon: Briefcase },
+            { title: "Events & Webinars", icon: Calendar },
+          ],
+        },
+        {
+          heading: "Blog",
+          items: [
+            { title: "Processing large jobs…", icon: FileText },
+            { title: "Defense in Depth…", icon: FileText },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    title: "Solutions",
+    megaMenu: {
+      columns: [
+        {
+          heading: "Skill Level",
+          items: [
+            { title: "AI Builders", icon: Bot },
+            { title: "No Code", icon: MousePointerClick },
+            { title: "Beginners", icon: User },
+            { title: "Developers", icon: Laptop },
+            { title: "Postgres Devs", icon: Server },
+          ],
+        },
+        {
+          heading: "Who It's For",
+          items: [
+            { title: "Hackathon Contestants", icon: Trophy },
+            { title: "Startups", icon: Building2 },
+            { title: "Enterprise", icon: Factory },
+            { title: "Innovation Teams", icon: Sparkles },
+          ],
+        },
+        {
+          heading: "Migration",
+          items: [
+            { title: "Switch from Firebase", icon: Shuffle },
+            { title: "Switch from Neon", icon: ArrowLeftRight },
+          ],
+        },
+      ],
+    },
+  },
   { title: "Pricing" },
   { title: "Docs" },
   { title: "Blog" },

@@ -5,40 +5,60 @@ import { Button } from "./button";
 import { Container } from "./container";
 import { Github } from "./icon/github";
 import { Logo } from "./icon/logo";
-import { navlinks } from "@/utils/constant";
+import { navLinks } from "@/utils/constant";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeIdx, setActiveIdx] = useState<number | null>(null);
   const isNavbarOpen = () => {
     setIsOpen(!isOpen);
   };
 
+  const parentVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
     <header className="fixed top-0 backdrop-blur-md z-50 w-full border-b border-transparent-border bg-background/60">
-      <Container className="w-full h-navigation-height flex items-center justify-between w-full">
+      <Container className="h-navigation-height flex items-center justify-between w-full">
         <div className="flex space-x-2 items-center justify-between lg:justify-start w-full">
           <Logo />
 
           {/* desktop */}
-          <div className="lg:flex space-x-5 pl-8 hidden lg:block">
-            {navlinks.map((link, idx) => (
-              <ul key={idx}>
-                <li className="text-sm hover:text-green transition-colors flex items-center gap-1">
-                  <p>{link.title}</p>
-                  {(idx === 0 || idx === 1) && <ChevronDown size={12} />}
-                </li>
-              </ul>
+          <div className="lg:flex space-x-5 pl-8 hidden">
+            {navLinks.map((link, idx) => (
+              <div key={idx}>
+                <ul>
+                  <li className="text-sm hover:text-green transition-colors flex items-center gap-1">
+                    <p>{link.title}</p>
+                    {link.megaMenu && <ChevronDown size={12} />}
+                  </li>
+                </ul>
+
+                {activeIdx != null && activeIdx === idx && (
+                  <div className="w-[250px] h-fit bg-black"></div>
+                )}
+              </div>
             ))}
           </div>
 
           {/* mobile */}
-          <div
-            className="transition-transform lg:hidden"
-            onClick={isNavbarOpen}
-          >
+          <div className="transition-transform lg:hidden">
             <div className="flex item-centers gap-x-2">
               <Button variant="tertiary" size="small">
                 <Link
@@ -50,9 +70,9 @@ export const Header = () => {
                 </Link>
               </Button>
               {isOpen ? (
-                <X className="absolute z-40 top-5 right-4" />
+                <X className="absolute z-40 top-5 right-4" onClick={isNavbarOpen} />
               ) : (
-                <Menu />
+                <Menu onClick={isNavbarOpen} />
               )}
             </div>
 
@@ -63,18 +83,71 @@ export const Header = () => {
                   animate={{ x: 0 }}
                   exit={{ x: "100%" }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="fixed top-0 right-0 h-screen w-[250px] bg-background backdrop-blur-2xl z-30"
+                  className="fixed top-0 right-0 h-screen w-full bg-background/95 backdrop-blur-2xl z-30"
                 >
-                  <div className="py-16">
-                    {navlinks.map((link, idx) => (
-                      <ul
-                        key={idx}
-                        className="text-center py-3 text-lg font-medium"
-                      >
-                        <li className="">
-                          <p>{link.title}</p>
-                        </li>
-                      </ul>
+                  <motion.div
+                    className="py-16"
+                    variants={parentVariants}
+                    initial="hidden"
+                    animate="show"
+                  >
+                    {navLinks.map((link, idx) => (
+                      <motion.div variants={childVariants} className="text-left px-5" key={idx}>
+                        <ul
+                          className={`text-left py-3 text-lg font-medium hover:text-green transition-colors cursor-pointer ${
+                            activeIdx === idx ? "text-green transition-colors" : ""
+                          }`}
+                          onClick={() => setActiveIdx(activeIdx === idx ? null : idx)}
+                        >
+                          <li className="flex items-center justify-between hover:transparent-border">
+                            <p>{link.title}</p>
+                            {link.megaMenu && (
+                              <ChevronDown
+                                size={12}
+                                className={`${
+                                  activeIdx === idx
+                                    ? "rotate-180 transition-transform text-green"
+                                    : ""
+                                }`}
+                              />
+                            )}
+                          </li>
+                        </ul>
+
+                        {activeIdx !== null && activeIdx === idx && (
+                          <motion.div
+                            variants={parentVariants}
+                            initial="hidden"
+                            animate="show"
+                            className="text-left text-md transition-transform"
+                          >
+                            {link.megaMenu?.columns.map((item, idx) => (
+                              <div key={idx} className="text-offWhite/80 text-sm">
+                                {item?.heading && (
+                                  <div className="mt-3 mb-1 text-secondary-text">
+                                    {item.heading}
+                                  </div>
+                                )}
+                                {item.items.map((text, idx) => (
+                                  <motion.div
+                                    key={idx}
+                                    variants={childVariants}
+                                    className="flex items-center justify-start gap-x-3 mb-2 hover:text-green hover:transition-colors cursor-pointer"
+                                  >
+                                    <div>
+                                      {text.icon ? (
+                                        <text.icon className="size-4 text-green-500" />
+                                      ) : null}
+                                    </div>
+
+                                    <div>{text.title}</div>
+                                  </motion.div>
+                                ))}
+                              </div>
+                            ))}
+                          </motion.div>
+                        )}
+                      </motion.div>
                     ))}
 
                     <div className="flex flex-col px-5 space-y-2">
@@ -83,7 +156,7 @@ export const Header = () => {
                       </Button>
                       <Button size="small">Start your project</Button>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.div>
               )}
             </AnimatePresence>
