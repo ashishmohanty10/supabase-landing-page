@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Supabase Landing Page Rebuild 🧰
 
-## Getting Started
+A clean, responsive clone of the official Supabase landing page — rebuilt from scratch as a learning exercise and demonstration of modern frontend practices.
 
-First, run the development server:
+## 🔎 What it is
+
+This project recreates the core UI and layout of Supabase’s official marketing website (hero section, feature list, testimonials, “trusted by” logos, templates section, footer etc.) using standard web technologies. The goal is to mimic the look-and-feel of the original page while improving understanding of layout, responsiveness, and design patterns.
+
+> 🚀 Hosted demo: https://supabaselandingpagerebuild.ashishdev.in/
+
+## 🧩 Features / What’s included
+
+- Responsive navigation bar with menu items (Product, Developers, Solutions, Pricing, Docs, Blog)
+- Hero section with headline, subtitle, and CTA buttons
+- Feature showcase — sections for templates, use-cases, and trust logos (e.g. Stripe, Vercel, etc.)
+- Testimonials / “Customer stories” style UI placeholders
+- Footer with links for resources, company, legal etc.
+- Clean UI, flexible layout (works on desktop & mobile)
+
+## 🛠️ Tech Stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS
+- Motion (animations)
+
+## 🚀 Purpose / Motivation
+
+- A learning project to practice replicating real-world landing page designs
+- Explore responsive design, layout techniques and UI structuring
+- Build a clone of a well-known SaaS landing page to sharpen frontend skills
+
+## 📦 Getting Started / How to view locally
 
 ```bash
+git clone git@github.com:ashishmohanty10/supabase-landing-page.git
+cd supabase-landing-page
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚠️ Disclaimer
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is **only** a UI clone for educational purposes. It does **not** include backend functionality, or any hidden replication of proprietary code or logic from Supabase.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
